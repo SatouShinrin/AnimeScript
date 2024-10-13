@@ -1,0 +1,58 @@
+Windows Registry Editor Version 5.00
+
+; Create Menu
+[HKEY_CLASSES_ROOT\*\shell\AnimeScripts]
+"Icon"="C:\\Tools\\icon\\anidb_icon.ico"
+"MUIVerb"="Anime Scripts"
+"SubCommands"=""
+
+; Checksum
+[HKEY_CLASSES_ROOT\*\shell\AnimeScripts\shell\01_checksum]
+"Icon"="C:\\Tools\\icon\\checksum_icon.ico"
+"MUIVerb"="Checksum"
+
+[HKEY_CLASSES_ROOT\*\shell\AnimeScripts\shell\01_checksum\command]
+@="\"C:\\Tools\\batch\\Checksum.bat\" \"%1\""
+
+; Run VBS to convert video
+[HKEY_CLASSES_ROOT\*\shell\AnimeScripts\shell\02_addcrc]
+"Icon"="C:\\Tools\\icon\\hash_icon.ico"
+"MUIVerb"="Add CRC"
+
+[HKEY_CLASSES_ROOT\*\shell\AnimeScripts\shell\02_addcrc\command]
+@="wscript \"C:\\Tools\\batch\\vbs\\Add_CRC.vbs\" \"%1\""
+
+; Modify CRC32
+[HKEY_CLASSES_ROOT\*\shell\AnimeScripts\shell\03_modcrc]
+"Icon"="C:\\Tools\\icon\\crc_modify_icon.ico"
+"MUIVerb"="Modify CRC"
+
+[HKEY_CLASSES_ROOT\*\shell\AnimeScripts\shell\03_modcrc\command]
+@="\"C:\\Tools\\batch\\Modify_CRC.bat\" \"%1\""
+
+
+; Create ed2k link
+[HKEY_CLASSES_ROOT\*\shell\AnimeScripts\shell\04_ed2klink]
+"Icon"="C:\\Tools\\icon\\ed2klink_icon.ico"
+"MUIVerb"="Create ED2K Link"
+
+[HKEY_CLASSES_ROOT\*\shell\AnimeScripts\shell\04_ed2klink\command]
+@="\"C:\\Tools\\batch\\Create_Ed2kLink.bat\" \"%1\""
+
+
+; Dump anime
+[HKEY_CLASSES_ROOT\*\shell\AnimeScripts\shell\05_dump]
+"Icon"="C:\\Tools\\icon\\dump_icon.ico"
+"MUIVerb"="Update Database"
+
+[HKEY_CLASSES_ROOT\*\shell\AnimeScripts\shell\05_dump\command]
+@="\"C:\\Tools\\batch\\Dump_Anime.bat\" \"%1\""
+
+
+; Create Keyframes
+[HKEY_CLASSES_ROOT\*\shell\AnimeScripts\shell\06_keyframes]
+"Icon"="C:\\Tools\\icon\\keyframe_icon.ico"
+"MUIVerb"="Create Keyframes"
+
+[HKEY_CLASSES_ROOT\*\shell\AnimeScripts\shell\06_keyframes\command]
+@="\"C:\\Tools\\batch\\Create_Keyframes.bat\" \"%1\""
