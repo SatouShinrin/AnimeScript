@@ -1,0 +1,9 @@
+__Note__
+
+I no longer use [**Ed2kGui.exe**](https://github.com/Kissaki/ed2k-gui) because sometimes it gives incorrect results, so I have been generating Ed2k links myself using [**Rhash.exe**](https://github.com/rhash/RHash).
+
+You can download and try the video sample.mkv in the sample folder. When I drag the file into Ed2kGui, it gives the result: `ed2k://|file|Sample.mkv|5266867|aa6683c1e7d926a5bd5f56b4deafd22a|/`
+
+But when I run the command: `avdump3cl --PrintEd2kLink sample.mkv`, it gives a result similar to the one I get when using **Rhash**: `ed2k://|file|Sample.mkv|5266867|F5D0D3019D3F8618BF95E6D096A2F1F2|/`
+
+They are completely different, but I will choose to use [**Avdump3**](https://github.com/DvdKhl/AVDump3) because it is released by AniDB.
