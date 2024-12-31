@@ -23,14 +23,14 @@ Checksum.bat ^
 Create_Ed2kLink.bat ^
 Create_Keyframes.bat ^
 Dump_Anime.bat ^
-Modify_CRC.bat
+Create_Chapters.bat
 
 set icon= ^
 dump_icon.ico ^
 ed2klink_icon.ico ^
 anidb_icon.ico ^
 hash_icon.ico ^
-crc_modify_icon.ico ^
+chapter_icon.ico ^
 keyframe_icon.ico
 
 set avdump= ^
@@ -71,7 +71,8 @@ libstdc++-6.dll ^
 libwinpthread-1.dll
 
 set vbs= ^
-Add_CRC.vbs
+Add_CRC.vbs ^
+Create_Chapters.vbs
 
 set context_menu= ^
 Add.reg ^
