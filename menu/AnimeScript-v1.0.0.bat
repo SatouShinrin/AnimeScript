@@ -8,7 +8,7 @@ set crcmanip_url=https://raw.githubusercontent.com/SatouShinrin/AnimeScript/main
 set batch_url=https://raw.githubusercontent.com/SatouShinrin/AnimeScript/main/batch
 set vbs_url=https://raw.githubusercontent.com/SatouShinrin/AnimeScript/main/batch/vbs
 set icon_url=https://raw.githubusercontent.com/SatouShinrin/AnimeScript/main/icon
-set context_menu_url=https://raw.githubusercontent.com/SatouShinrin/AutoScript/main/menu
+set context_menu_url=https://raw.githubusercontent.com/SatouShinrin/AnimeScript/main/menu
 
 REM List of files to download
 set bin= ^
@@ -63,16 +63,9 @@ Newtonsoft.Json.dll ^
 Serilog.dll ^
 Serilog.Extensions.Logging.dll
 
-set crc_mod= ^
-crcmanip.exe ^
-libgcc_s_sjlj-1.dll ^
-libpng16-16.dll ^
-libstdc++-6.dll ^
-libwinpthread-1.dll
-
 set vbs= ^
-Add_CRC.vbs ^
-Create_Chapters.vbs
+Create_Chapters.vbs ^
+Add_CRC.vbs
 
 set context_menu= ^
 Add.reg ^
@@ -88,7 +81,6 @@ echo.
 if not exist "%install_dir%" md "%install_dir%" 
 if not exist "%install_dir%\bin" md "%install_dir%\bin" 
 if not exist "%install_dir%\bin\Avdump3" md "%install_dir%\bin\Avdump3" 
-if not exist "%install_dir%\bin\crcmanip" md "%install_dir%\bin\crcmanip" 
 if not exist "%install_dir%\batch" md "%install_dir%\batch"
 if not exist "%install_dir%\batch\vbs" md "%install_dir%\batch\vbs"
 if not exist "%install_dir%\icon" md "%install_dir%\icon"
@@ -147,12 +139,6 @@ for %%a in (%context_menu%) do (
      if exist "%install_dir%\%%a" if /I "%overwrite%"=="y" powershell Start-BitsTransfer %context_menu_url%/%%a "%install_dir%\%%a" && echo Overwrote %%a context menu
      if exist "%install_dir%\%%a" if /I "%overwrite%"=="n" echo Skipped %%a
      if not exist "%install_dir%\%%a" powershell Start-BitsTransfer %context_menu_url%/%%a "%install_dir%\%%a" && echo Completed transfer %%a context menu from repository.
-)
-
-for %%a in (%crc_mod%) do (
-     if exist "%install_dir%\bin\crcmanip\%%a" if /I "%overwrite%"=="y" powershell Start-BitsTransfer %crcmanip_url%/%%a "%install_dir%\bin\crcmanip\%%a" && echo Overwrote %%a
-     if exist "%install_dir%\bin\crcmanip\%%a" if /I "%overwrite%"=="n" echo Skipped %%a
-     if not exist "%install_dir%\bin\crcmanip\%%a" powershell Start-BitsTransfer %crcmanip_url%/%%a "%install_dir%\bin\crcmanip\%%a" && echo Completed transfer %%a from repository.
 )
 
 echo.
