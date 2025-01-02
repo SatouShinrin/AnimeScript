@@ -23,37 +23,57 @@ Windows Registry Editor Version 5.00
 [HKEY_CLASSES_ROOT\*\shell\AnimeScripts\shell\02_addcrc\command]
 @="wscript \"C:\\Tools\\batch\\vbs\\Add_CRC.vbs\" \"%1\""
 
+
+; Create torrent file
+[HKEY_CLASSES_ROOT\*\shell\AnimeScripts\shell\03_torrent]
+"Icon"="C:\\Tools\\icon\\torrent_icon.ico"
+"MUIVerb"="Create Torrent"
+
+[HKEY_CLASSES_ROOT\*\shell\AnimeScripts\shell\03_torrent\command]
+@="\"C:\\Tools\\batch\\Experiment.bat\" \"%1\""
+
+
+; Nyaa upload
+[HKEY_CLASSES_ROOT\*\shell\AnimeScripts\shell\04_nyaa]
+"Icon"="C:\\Tools\\icon\\nyaa_icon.ico"
+"MUIVerb"="Upload Nyaa"
+
+[HKEY_CLASSES_ROOT\*\shell\AnimeScripts\shell\04_nyaa\command]
+@="\"C:\\Tools\\batch\\Experiment.bat\" \"%1\""
+
+
+
 ; Create ed2k link
-[HKEY_CLASSES_ROOT\*\shell\AnimeScripts\shell\03_ed2klink]
+[HKEY_CLASSES_ROOT\*\shell\AnimeScripts\shell\05_ed2klink]
 "Icon"="C:\\Tools\\icon\\ed2klink_icon.ico"
 "MUIVerb"="Get ED2K Link"
 
-[HKEY_CLASSES_ROOT\*\shell\AnimeScripts\shell\03_ed2klink\command]
+[HKEY_CLASSES_ROOT\*\shell\AnimeScripts\shell\05_ed2klink\command]
 @="\"C:\\Tools\\batch\\Create_Ed2kLink.bat\" \"%1\""
 
 
 ; Dump anime
-[HKEY_CLASSES_ROOT\*\shell\AnimeScripts\shell\04_dump]
+[HKEY_CLASSES_ROOT\*\shell\AnimeScripts\shell\06_dump]
 "Icon"="C:\\Tools\\icon\\dump_icon.ico"
 "MUIVerb"="Update Database"
 
-[HKEY_CLASSES_ROOT\*\shell\AnimeScripts\shell\04_dump\command]
+[HKEY_CLASSES_ROOT\*\shell\AnimeScripts\shell\06_dump\command]
 @="\"C:\\Tools\\batch\\Dump_Anime.bat\" \"%1\""
 
 
 ; Run VBS to generate Chapter
-[HKEY_CLASSES_ROOT\*\shell\AnimeScripts\shell\05_chapter]
+[HKEY_CLASSES_ROOT\*\shell\AnimeScripts\shell\07_chapter]
 "Icon"="C:\\Tools\\icon\\chapter_icon.ico"
 "MUIVerb"="Create Chapters"
 
-[HKEY_CLASSES_ROOT\*\shell\AnimeScripts\shell\05_chapter\command]
+[HKEY_CLASSES_ROOT\*\shell\AnimeScripts\shell\07_chapter\command]
 @="wscript \"C:\\Tools\\batch\\vbs\\Create_Chapters.vbs\" \"%1\""
 
 
 ; Create Keyframes
-[HKEY_CLASSES_ROOT\*\shell\AnimeScripts\shell\06_keyframes]
+[HKEY_CLASSES_ROOT\*\shell\AnimeScripts\shell\08_keyframes]
 "Icon"="C:\\Tools\\icon\\keyframe_icon.ico"
 "MUIVerb"="Create Keyframes"
 
-[HKEY_CLASSES_ROOT\*\shell\AnimeScripts\shell\06_keyframes\command]
+[HKEY_CLASSES_ROOT\*\shell\AnimeScripts\shell\08_keyframes\command]
 @="\"C:\\Tools\\batch\\Create_Keyframes.bat\" \"%1\""
