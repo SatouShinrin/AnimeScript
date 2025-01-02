@@ -14,11 +14,6 @@ set output_txt=%~n1_temp.txt
 set output_file=%~n1.xml
 
 :: Validate files
-if not exist "%input_file%" (
-    echo File '%input_file%' doesn't exist
-    exit /b 1
-)
-
 if exist "%output_txt%" (
     del "%output_txt%"
 )
