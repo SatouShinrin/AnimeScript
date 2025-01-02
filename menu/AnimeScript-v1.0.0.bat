@@ -23,7 +23,9 @@ Checksum.bat ^
 Create_Ed2kLink.bat ^
 Create_Keyframes.bat ^
 Dump_Anime.bat ^
-Create_Chapters.bat
+Create_Chapters.bat ^
+Upload_Nyaa.bat ^
+Create_Torrent.bat
 
 set icon= ^
 dump_icon.ico ^
@@ -31,7 +33,10 @@ ed2klink_icon.ico ^
 anidb_icon.ico ^
 hash_icon.ico ^
 chapter_icon.ico ^
-keyframe_icon.ico
+keyframe_icon.ico ^
+nyaa_icon.ico ^
+torrent_icon.ico ^
+U2_icon.ico
 
 set avdump= ^
 AVD3AniDBModule.dll ^
